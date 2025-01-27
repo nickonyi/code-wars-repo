@@ -18,3 +18,9 @@ function pow(x, n) {
 }
 
 console.log(pow(2, 6));
+
+function isLochNessMonster(s) {
+  //FIND THE LOCH NESS MONSTER. SAVE YOUR TREE FIDDY
+  //look for the words tree fiddy three fifty $3.50
+  //if I find return true is the Loch ness monster else it is false
+}

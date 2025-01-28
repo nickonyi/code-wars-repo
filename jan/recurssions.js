@@ -63,6 +63,9 @@ function array(string) {
   return str.join(' ');
 }
 
-console.log(array('1,2,3'));
-console.log(array('1,2,3,4,5'));
-console.log(array('1'));
+function getSize(width, height, depth) {
+  const surfaceArea = 2 * (width * height + height * depth + depth * width);
+  const volume = width * height * depth;
+
+  return [surfaceArea, volume];
+}

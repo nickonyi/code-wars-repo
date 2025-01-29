@@ -43,14 +43,24 @@ function revrot(str, sz) {
   //get the sum of every item in the array
   const arraySum = sumItem(chunks);
   //If the sum of a chunk's digits is divisible by 2, reverse that chunk; otherwise rotate it to the left by one position.
-  arraySum.map((item) => {
-    if (item % 2 == 0) {
+  arraySum.forEach((sum, index) => {
+    if (sum % 2 === 0) {
+      chunks[index].reverse();
+    } else {
+      chunks[index].push(chunks[index].shift());
     }
   });
+  //put the modified chunks together
+  const joinedChunks = chunks.flat().join('');
+  return joinedChunks;
 }
 
 function chunkArray(arr, x) {
   let result = [];
+
+  if (x == 0) {
+    return [];
+  }
 
   for (let i = 0; i < arr.length; i += x) {
     result.push(arr.slice(i, i + x));
@@ -72,3 +82,6 @@ const sumItem = (array) => {
   return sumItem;
 };
 console.log(revrot('733049910872815764', 5));
+console.log(chunkArray('1234', 0));
+
+console.log(revrot('1234', 0));

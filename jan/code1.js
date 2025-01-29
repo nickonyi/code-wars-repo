@@ -34,6 +34,41 @@ const strayRefactor = (numbers) => {
   return a[a.length - 1];
 };
 
-console.log(strayRefactor([1, 1, 2]));
-console.log(strayRefactor([2, 1, 1]));
-console.log(strayRefactor([17, 17, 3, 17, 17, 17, 17]));
+function revrot(str, sz) {
+  // your code
+  //turn the input into an array
+  const numArr = str.split('').map(Number);
+  //cut the array into chunks of sz size
+  const chunks = chunkArray(numArr, sz);
+  //get the sum of every item in the array
+  const arraySum = sumItem(chunks);
+  //If the sum of a chunk's digits is divisible by 2, reverse that chunk; otherwise rotate it to the left by one position.
+  arraySum.map((item) => {
+    if (item % 2 == 0) {
+    }
+  });
+}
+
+function chunkArray(arr, x) {
+  let result = [];
+
+  for (let i = 0; i < arr.length; i += x) {
+    result.push(arr.slice(i, i + x));
+  }
+
+  if (result[result.length - 1].length < x) {
+    result.pop();
+    return result;
+  }
+
+  return result;
+}
+
+const sumItem = (array) => {
+  let sumItem = [];
+  array.forEach((item) => {
+    sumItem.push(item.reduce((acc, currentNum) => acc + currentNum, 0));
+  });
+  return sumItem;
+};
+console.log(revrot('733049910872815764', 5));

@@ -69,3 +69,14 @@ function getSize(width, height, depth) {
 
   return [surfaceArea, volume];
 }
+
+function revrot(str, sz) {
+  // your code
+  //turn the input into an array
+  const numArr = str.split('');
+  console.log(numArr);
+
+  //cut the string into chunks of sz size
+}
+
+console.log(revrot('733049910872815764', 5));

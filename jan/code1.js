@@ -81,7 +81,9 @@ const sumItem = (array) => {
   });
   return sumItem;
 };
-console.log(revrot('733049910872815764', 5));
-console.log(chunkArray('1234', 0));
 
-console.log(revrot('1234', 0));
+function sortByLength(array) {
+  // Return an array containing the same strings,
+  // ordered from shortest to longest
+  return [];
+}

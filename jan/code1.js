@@ -89,4 +89,28 @@ function sortByLength(array) {
   return array;
 }
 
-console.log(sortByLength(['Beg', 'Life', 'I', 'To']));
+function invert(array) {
+  return array.map((item) => {
+    return -item;
+  });
+}
+
+function rowWeights(array) {
+  //your code here
+  let array1 = [];
+  let array2 = [];
+
+  array.map((num, index) => {
+    if (index % 2 == 0) {
+      array1.push(num);
+    } else {
+      array2.push(num);
+    }
+  });
+
+  const jointArray = [array1, array2];
+
+  return jointArray.map((item) => item.reduce((acc, num) => acc + num, 0));
+}
+
+console.log(rowWeights([10, 23, 13, 45]));

@@ -5,17 +5,19 @@ function mix(s1, s2) {
     let string2 =s2.toLowerCase().replace(/[^a-zA-Z]/g, '');
     //count the frequency of every letter
 
-    const frequency1 = [...string1].reduce((frequency,char)=> {
+    let frequency1 = [...string1].reduce((frequency,char)=> {
         frequency[char]=(frequency[char] || 0)+1
         return frequency;
     },{});
 
-    const frequency2 = [...string2].reduce((frequency,char)=> {
+    let frequency2 = [...string2].reduce((frequency,char)=> {
         frequency[char]=(frequency[char] || 0)+1
         return frequency;
     },{});
 
     //remove items that don't appear more that two times
+    frequency1 = Object.fromEntries(Object.entries(frequency1).filter(([char,count]) => count >=2));
+    frequency2 = Object.fromEntries(Object.entries(frequency2).filter(([char,count]) => count >=2));
     return [frequency1,frequency2];
     
   }

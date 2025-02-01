@@ -1,8 +1,8 @@
 function mix(s1, s2) {
   // your code
   //convert the strings to lowercase letter and only have letters in every string
-  let string1 = s1.toLowerCase().replace(/[^a-zA-Z]/g, '');
-  let string2 = s2.toLowerCase().replace(/[^a-zA-Z]/g, '');
+  let string1 = s1.replace(/[^a-z]/g, '');
+  let string2 = s2.replace(/[^a-z]/g, '');
   //count the frequency of every letter
 
   let frequency1 = [...string1].reduce((frequency, char) => {
@@ -43,11 +43,9 @@ const compareFrequencies = (obj1, obj2) => {
     } else if (count2 > count1) {
       result.push(`2:${letter.repeat(count2)}`);
     } else if (count1 === count2) {
-      result.push(`:=${letter.repeat(count2)}`);
+      result.push(`=:${letter.repeat(count2)}`);
     }
   });
-
-  console.log(result.sort((a, b) => b.length - a.length));
 
   return result
     .sort((a, b) => {
@@ -66,4 +64,4 @@ const compareFrequencies = (obj1, obj2) => {
     .join('/');
 };
 
-console.log(mix('Are they here', 'yes, they are here'));
+console.log(mix('Lords of the Fallen', 'gamekult'));

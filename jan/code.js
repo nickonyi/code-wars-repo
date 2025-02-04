@@ -65,3 +65,7 @@ const compareFrequencies = (obj1, obj2) => {
 };
 
 console.log(mix('Lords of the Fallen', 'gamekult'));
+
+function addBinary(a, b) {
+  return (a + b).toString(2);
+}

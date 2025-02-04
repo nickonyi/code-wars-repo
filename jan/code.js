@@ -69,3 +69,11 @@ console.log(mix('Lords of the Fallen', 'gamekult'));
 function addBinary(a, b) {
   return (a + b).toString(2);
 }
+
+var min = function (list) {
+  return Math.min(...list);
+};
+
+var max = function (list) {
+  return Math.max(...list);
+};

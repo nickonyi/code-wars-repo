@@ -53,4 +53,20 @@ function repeatStr(n, s) {
   return s.repeat(n);
 }
 
-console.log(repeatStr(10, 'I love myself'));
+function sumCubes(n) {
+  // ...
+  const cubes = [];
+
+  for (let i = 1; i <= n; i++) {
+    cubes.push(i ** 3);
+  }
+
+  return cubes.reduce((prev, curr) => prev + curr, 0);
+}
+
+function sortGiftCode(code) {
+  //TODO
+  return code.split('').sort().join('');
+}
+
+console.log(sortGiftCode('atstsgbcsedf'));

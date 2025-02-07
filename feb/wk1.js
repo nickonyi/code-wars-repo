@@ -36,4 +36,21 @@ function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
   return Math.floor(Math.sqrt(sumAge) / 2);
 }
 
-console.log(predictAge(65, 60, 75, 55, 60, 63, 64, 45));
+function Sleigh() {}
+
+Sleigh.prototype.authenticate = function (name, password) {
+  // TODO
+  if (name === 'Santa Claus' && password === 'Ho Ho Ho!') {
+    return true;
+  }
+
+  return false;
+};
+
+let sleight = new Sleigh();
+
+function repeatStr(n, s) {
+  return s.repeat(n);
+}
+
+console.log(repeatStr(10, 'I love myself'));

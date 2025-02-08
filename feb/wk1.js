@@ -69,4 +69,8 @@ function sortGiftCode(code) {
   return code.split('').sort().join('');
 }
 
-console.log(sortGiftCode('atstsgbcsedf'));
+function isPalindrome(x) {
+  // your code here
+  const palindrome = x.reverse();
+  return palindrome;
+}

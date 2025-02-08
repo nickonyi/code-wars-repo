@@ -84,4 +84,20 @@ function digits(n) {
   return numString.split('').length;
 }
 
-console.log(digits(923344));
+class Ship {
+  constructor(draft, crew) {
+    this.draft = draft;
+    this.crew = crew;
+  }
+
+  //YOUR CODE HERE...
+  isWorthit() {
+    const crewWeight = this.crew * 1.5;
+    const lootWorthy = this.draft - crewWeight;
+
+    return lootWorthy > 20;
+  }
+}
+
+let titanic = new Ship(15, 10);
+console.log(titanic.isWorthit());

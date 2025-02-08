@@ -76,4 +76,12 @@ function isPalindrome(x) {
   return x.toLowerCase() === palindrome;
 }
 
-console.log(isPalindrome('Abba'));
+function digits(n) {
+  // TODO
+  //convert the number to a string
+  const numString = String(n);
+
+  return numString.split('').length;
+}
+
+console.log(digits(923344));

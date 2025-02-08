@@ -71,6 +71,9 @@ function sortGiftCode(code) {
 
 function isPalindrome(x) {
   // your code here
-  const palindrome = x.reverse();
-  return palindrome;
+  const palindrome = x.toLowerCase().split('').reverse().join('');
+
+  return x.toLowerCase() === palindrome;
 }
+
+console.log(isPalindrome('Abba'));

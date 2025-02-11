@@ -77,3 +77,20 @@ var min = function (list) {
 var max = function (list) {
   return Math.max(...list);
 };
+
+function calculateTip(amount, rating) {
+  const tip = {
+    terrible: (0 * amount) / 100,
+    poor: (5 * amount) / 100,
+    good: (10 * amount) / 100,
+    great: (15 * amount) / 100,
+    excellent: (20 * amount) / 100,
+  };
+
+  return rating.toLowerCase() in tip
+    ? Math.ceil(tip[rating.toLowerCase()])
+    : 'Rating not recognised';
+}
+
+console.log(calculateTip(20, 'terrible'));
+//console.log(calculateTip(26.95, 'good'));

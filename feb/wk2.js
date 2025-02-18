@@ -36,4 +36,18 @@ function comp(array1, array2) {
 let a = [121, 144, 19, 161, 19, 144, 19, 11];
 let b = [122, 14641, 20736, 361, 25921, 361, 20736, 361];
 
-console.log(comp(null, b));
+function minSum(arr) {
+  // your code here
+  arr = arr.sort((a, b) => a - b);
+  let sum = 0;
+  let n = arr.length;
+
+  for (let i = 0; i < Math.floor(n / 2); i++) {
+    sum += arr[i] * arr[n - 1 - i];
+  }
+
+  return sum;
+}
+
+console.log(minSum([5, 4, 2, 3]));
+console.log(minSum([12, 6, 10, 26, 3, 24]));

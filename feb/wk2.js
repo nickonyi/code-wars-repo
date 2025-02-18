@@ -23,7 +23,7 @@ function comp(array1, array2) {
   array1 = array1.sort((a, b) => a - b);
   //sort the second array
   array2 = array2.sort((a, b) => a - b);
-  //then compare if the numbers in both arrays are the same
+  //then compare if the numbers in both arrays arfffffde the same
   //If I find any number that xxxxxis different return false other wise if all the numbers are the same return true
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {

@@ -49,5 +49,6 @@ function minSum(arr) {
   return sum;
 }
 
-console.log(minSum([5, 4, 2, 3]));
-console.log(minSum([12, 6, 10, 26, 3, 24]));
+function points(games) {
+  return 0;
+}

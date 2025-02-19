@@ -50,5 +50,22 @@ function minSum(arr) {
 }
 
 function points(games) {
-  return 0;
+  let gamesPlayed = games.map((game) => game.split(':'));
+  let points = 0;
+
+  gamesPlayed.map((game) => {
+    if (game[0] > game[1]) {
+      points += 3;
+    } else if (game[0] == game[1]) {
+      points += 1;
+    } else if (game[0] < game[1]) {
+      points += 0;
+    }
+  });
+
+  return points;
 }
+
+console.log(
+  points(['1:0', '2:0', '3:0', '4:0', '2:1', '3:1', '4:1', '3:2', '4:2', '4:3'])
+);

@@ -73,7 +73,7 @@ function odds(values) {
 
 function cockroachSpeed(s) {
   //Good Luck!
-  return Math.floor((s * 100000) / 3600);
+  return Math.floor((s * 10000000) / 3600);
 }
 
 function countRedBeads(n) {

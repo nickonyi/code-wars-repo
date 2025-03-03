@@ -17,7 +17,32 @@ function filterString(value) {
 
 //input:
 
-console.log(filterString('tetet2jej3jje7jj8'));
-console.log(filterString('aa1bb2cc3dd'));
+function whatday(num) {
+  // put your code here
+  switch (num) {
+    case 1:
+      return 'Sunday';
+    case 2:
+      return 'Monday';
+    case 3:
+      return 'Tuesday';
+    case 4:
+      return 'Wednesday';
+    case 5:
+      return 'Thursday';
+    case 6:
+      return 'Friday';
+    case 7:
+      return 'Saturday';
+    default:
+      return 'Invalid input'; // Handling invalid numbers
+  }
+}
 
-console.log(typeof 1);
+function enough(cap, on, wait) {
+  // your code here
+  if (cap - on >= wait) {
+    return 0;
+  }
+  return on + wait - cap;
+}

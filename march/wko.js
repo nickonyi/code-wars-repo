@@ -49,6 +49,6 @@ function decode(string) {
   return arrVowl.join('');
 }
 
-console.log(encode('hello'));
-console.log(encode('How are you today?'));
-console.log(decode('h2ll4'));
+function productFib(prod) {
+  // ...
+}

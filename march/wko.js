@@ -64,4 +64,24 @@ function sumMul(n, m) {
   return arrSum.length === 0 ? 'INVALID' : arrSum.reduce((a, b) => a + b, 0);
 }
 
-console.log(sumMul(3, 13));
+class Player {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+let ex_names = ['a', 'b', 'c', 'd', 'c', 'e', 'f', 'g', 'h', 'z'];
+let players = ex_names.map((n) => new Player(n));
+
+function duckDuckGoose(players, goose) {
+  // ...
+  const index =
+    goose % players.length === 0
+      ? players.length - 1
+      : (goose % players.length) - 1;
+
+  const player = players[index];
+  return player.name;
+}
+
+console.log(duckDuckGoose(players, 28));

@@ -52,3 +52,16 @@ function decode(string) {
 function productFib(prod) {
   // ...
 }
+
+function sumMul(n, m) {
+  //your idea here
+  let arrSum = [];
+  for (let i = 0; i < m; i++) {
+    if (i % n == 0) {
+      arrSum.push(i);
+    }
+  }
+  return arrSum.length === 0 ? 'INVALID' : arrSum.reduce((a, b) => a + b, 0);
+}
+
+console.log(sumMul(3, 13));

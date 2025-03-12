@@ -15,4 +15,13 @@ function gps(s, x) {
 
 let x = [0.0, 0.19, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25];
 
-console.log(gps(15, x));
+String.prototype.toAlternatingCase = function () {
+  // Define your method here :)
+};
+
+function quote(fighter) {
+  // your code here
+  return fighter.toLowerCase() === 'conor mcgregor'
+    ? "I'd like to take this chance to apologize.. To absolutely NOBODY!"
+    : 'I am not impressed by your performance.';
+}

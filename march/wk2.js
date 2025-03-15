@@ -25,3 +25,20 @@ function quote(fighter) {
     ? "I'd like to take this chance to apologize.. To absolutely NOBODY!"
     : 'I am not impressed by your performance.';
 }
+
+function all(arr, fun) {
+  // ...
+  if (arr.length < 1) return true;
+  let xox = arr.filter((x) => fun(x));
+
+  if (xox.length < 1) {
+    return false;
+  }
+  return true;
+}
+
+console.log(
+  all([1, 2, 3, 4, 5], function (v) {
+    return v < 9;
+  })
+);

@@ -27,14 +27,7 @@ function quote(fighter) {
 }
 
 function all(arr, fun) {
-  // ...
-  if (arr.length < 1) return true;
-  let xox = arr.filter((x) => fun(x));
-
-  if (xox.length < 1) {
-    return false;
-  }
-  return true;
+  return arr.every(fun);
 }
 
 console.log(

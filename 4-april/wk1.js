@@ -32,3 +32,15 @@ function apple(x) {
     return 'Help yourself to a honeycomb Yorkie for the glovebox.';
   }
 }
+let fighters = [
+  ['Ryu', 'E.Honda', 'Blanka', 'Guile', 'Balrog', 'Vega'],
+  ['Ken', 'Chun Li', 'Zangief', 'Dhalsim', 'Sagat', 'M.Bison'],
+];
+
+let initial_position = (0, 0);
+let moves = ['up', 'left', 'right', 'left', 'left'];
+function streetFighterSelection(fighters, position, moves) {
+  return fighters[0][0];
+}
+
+console.log(streetFighterSelection(fighters, initial_position, moves));

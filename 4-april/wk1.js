@@ -41,40 +41,58 @@ let initial_position = [0, 0];
 let moves = ['up', 'left', 'right', 'left', 'left'];
 let movess = ['up', 'up', 'up', 'up', 'up'];
 let movesss = ['down', 'down', 'down', 'down', 'down'];
-function streetFighterSelection(fighters, position, moves) {
-  let selectedPlayers = [];
-  let rows = fighters.length;
-  let cols = fighters[0].length;
-  let path = [];
+//function streetFighterSelection(fighters, position, moves) {
+//  let selectedPlayers = [];
+//  let rows = fighters.length;
+//  let cols = fighters[0].length;
+//  let path = [];
+//
+//  //based o the move convert them to coodinates
+//  for (const move of moves) {
+//    console.log(position);
+//
+//    switch (move) {
+//      case 'up':
+//        if (position[0] > 0) position[0]--;
+//        break;
+//      case 'down':
+//        if (position[0] < rows - 1) position[0]++;
+//        break;
+//      case 'left':
+//        position[1] = (position[1] - 1 + cols) % cols;
+//        break;
+//      case 'right':
+//        position[1] = (position[1] + 1 + cols) % cols;
+//        break;
+//
+//      default:
+//        break;
+//    }
+//    path.push(position.slice());
+//  }
+//  //using the path navigate to every item in the fighters array
+//
+//  path.map((i) => selectedPlayers.push(fighters[i[0]][i[1]]));
+//  return selectedPlayers;
+//}
 
-  //based o the move convert them to coodinates
-  for (const move of moves) {
+function streetFighterSelection(fighters, position, moves) {
+  let result = [];
+  moves.forEach((move) => {
+    if (move === 'up') {
+      position[0] = 0;
+    } else if (move === 'down') {
+      position[0] = 1;
+    } else if (move === 'right') {
+      position[1] = position[1] === 5 ? 0 : position[1] + 1;
+    } else if (move === 'left') {
+      position[1] = position[1] === 0 ? 5 : position[1] - 1;
+    }
     console.log(position);
 
-    switch (move) {
-      case 'up':
-        if (position[0] > 0) position[0]--;
-        break;
-      case 'down':
-        if (position[0] < rows - 1) position[0]++;
-        break;
-      case 'left':
-        position[1] = (position[1] - 1 + cols) % cols;
-        break;
-      case 'right':
-        position[1] = (position[1] + 1 + cols) % cols;
-        break;
-
-      default:
-        break;
-    }
-    path.push(position.slice());
-  }
-  //using the path navigate to every item in the fighters array
-  console.log(path);
-
-  path.map((i) => selectedPlayers.push(fighters[i[0]][i[1]]));
-  return selectedPlayers;
+    result.push(fighters[position[0]][position[1]]);
+  });
+  return result;
 }
 
-console.log(streetFighterSelection(fighters, initial_position, movesss));
+console.log(streetFighterSelection(fighters, initial_position, moves));

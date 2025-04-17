@@ -37,10 +37,44 @@ let fighters = [
   ['Ken', 'Chun Li', 'Zangief', 'Dhalsim', 'Sagat', 'M.Bison'],
 ];
 
-let initial_position = (0, 0);
+let initial_position = [0, 0];
 let moves = ['up', 'left', 'right', 'left', 'left'];
+let movess = ['up', 'up', 'up', 'up', 'up'];
+let movesss = ['down', 'down', 'down', 'down', 'down'];
 function streetFighterSelection(fighters, position, moves) {
-  return fighters[0][0];
+  let selectedPlayers = [];
+  let rows = fighters.length;
+  let cols = fighters[0].length;
+  let path = [];
+
+  //based o the move convert them to coodinates
+  for (const move of moves) {
+    console.log(position);
+
+    switch (move) {
+      case 'up':
+        if (position[0] > 0) position[0]--;
+        break;
+      case 'down':
+        if (position[0] < rows - 1) position[0]++;
+        break;
+      case 'left':
+        position[1] = (position[1] - 1 + cols) % cols;
+        break;
+      case 'right':
+        position[1] = (position[1] + 1 + cols) % cols;
+        break;
+
+      default:
+        break;
+    }
+    path.push(position.slice());
+  }
+  //using the path navigate to every item in the fighters array
+  console.log(path);
+
+  path.map((i) => selectedPlayers.push(fighters[i[0]][i[1]]));
+  return selectedPlayers;
 }
 
-console.log(streetFighterSelection(fighters, initial_position, moves));
+console.log(streetFighterSelection(fighters, initial_position, movesss));

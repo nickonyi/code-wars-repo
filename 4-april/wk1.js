@@ -88,7 +88,6 @@ function streetFighterSelection(fighters, position, moves) {
     } else if (move === 'left') {
       position[1] = position[1] === 0 ? 5 : position[1] - 1;
     }
-    console.log(position);
 
     result.push(fighters[position[0]][position[1]]);
   });
@@ -96,3 +95,10 @@ function streetFighterSelection(fighters, position, moves) {
 }
 
 console.log(streetFighterSelection(fighters, initial_position, moves));
+
+function mxdiflg(a1, a2) {
+  // your code
+  if (a1.length < 0 || a2.length < 0) {
+    return -1;
+  }
+}

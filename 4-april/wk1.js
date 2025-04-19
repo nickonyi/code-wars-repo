@@ -98,7 +98,35 @@ console.log(streetFighterSelection(fighters, initial_position, moves));
 
 function mxdiflg(a1, a2) {
   // your code
-  if (a1.length < 0 || a2.length < 0) {
+  if (a1.length === 0 || a2.length === 0) {
     return -1;
   }
+  let maxDiff = 0;
+
+  a1.forEach((x) =>
+    a2.forEach((y) => {
+      const diff = Math.abs(x.length - y.length);
+      if (diff > maxDiff) {
+        maxDiff = diff;
+      }
+    })
+  );
+  return maxDiff;
 }
+
+let a1 = [
+  'hoqq',
+  'bbllkw',
+  'oox',
+  'ejjuyyy',
+  'plmiis',
+  'xxxzgpsssa',
+  'xxwwkktt',
+  'znnnnfqknaz',
+  'qqquuhii',
+  'dvvvwz',
+];
+let a2 = ['cccooommaaqqoxii', 'gggqaffhhh', 'tttoowwwmmww'];
+let a3 = [];
+
+console.log(mxdiflg(a1, a3));

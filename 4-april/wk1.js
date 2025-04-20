@@ -129,4 +129,4 @@ let a1 = [
 let a2 = ['cccooommaaqqoxii', 'gggqaffhhh', 'tttoowwwmmww'];
 let a3 = [];
 
-console.log(mxdiflg(a1, a3));
+console.log(mxdiflg(a1, a2));

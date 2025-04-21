@@ -126,7 +126,7 @@ let a1 = [
   'qqquuhii',
   'dvvvwz',
 ];
-let a2 = ['cccooommaaqqoxii', 'gggqaffhhh', 'tttoowwwmmww'];
+let a2 = ['cccooommaaqhdhhdhdhdhdqoxii', 'gggqaffhhh', 'tttoowwwmmww'];
 let a3 = [];
 
 console.log(mxdiflg(a1, a2));

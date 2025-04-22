@@ -22,4 +22,31 @@ function vowelIndices(word) {
   return result;
 }
 
-console.log(vowelIndices('supEr'));
+function isSortedAndHow(array) {
+  const isSorted = isSortedAscending(array)
+    ? 'yes, ascending'
+    : isSortedDescending(array)
+    ? 'yes, descending'
+    : 'no';
+  return isSorted;
+}
+
+const isSortedAscending = (array) => {
+  for (let i = 1; i < array.length; i++) {
+    if (array[i - 1] > array[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+const isSortedDescending = (array) => {
+  for (let i = 1; i < array.length; i++) {
+    if (array[i - 1] < array[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+console.log(isSortedAndHow([4, 2, 30]));
+console.log(isSortedDescending([4, 2, 30]));

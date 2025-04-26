@@ -14,11 +14,12 @@ function giveMeFive(obj) {
 
 const orderedCount = function (text) {
   // count the occurrence of the characters
-  const charCount = text.split('').reduce((acc, char) => {
-    acc[char] = (acc[char] || 0) + 1;
-    return acc;
-  }, {});
-  return Object.entries(charCount);
+  const charCount = new Map();
+
+  for (const char of text) {
+    charCount.set(char, (charCount.get(char) || 0) + 1);
+  }
+  return Array.from(charCount.entries());
 };
 
 console.log(orderedCount('233312'));

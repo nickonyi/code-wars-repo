@@ -48,5 +48,12 @@ const isSortedDescending = (array) => {
   return true;
 };
 
-console.log(isSortedAndHow([4, 2, 30]));
-console.log(isSortedDescending([4, 2, 30]));
+function animal(obj) {
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
+}
+
+function toNumberArray(stringarray) {
+  return stringarray.map((c) => Number(c));
+}
+
+console.log(toNumberArray(['1.1', '2.2', '3.3']));

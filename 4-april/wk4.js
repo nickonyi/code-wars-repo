@@ -66,4 +66,8 @@ console.log(sortArrays([5, 4, 3, 2, 1], [6, 5, 7, 8, 9]));
 
 let Ghost = function () {
   // your code goes here
+  this.color = 'red' || 'white';
 };
+
+const white = new Ghost();
+console.log(white.color);

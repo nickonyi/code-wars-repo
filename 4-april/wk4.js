@@ -63,3 +63,7 @@ function sortAccordingtoArr(arr, arrSort) {
 //console.log(sortWithPositions([6, 5, 7, 8, 9]));
 console.log(sortArrays([5, 4, 3, 2, 1], [6, 5, 7, 8, 9]));
 //console.log(sortArrays([5, 6, 9, 2, 6, 5], [3, 6, 7, 4, 8, 1]));
+
+let Ghost = function () {
+  // your code goes here
+};

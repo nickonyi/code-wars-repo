@@ -68,6 +68,3 @@ let Ghost = function () {
   // your code goes here
   this.color = 'red' || 'white';
 };
-
-const white = new Ghost();
-console.log(white.color);

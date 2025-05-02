@@ -1,7 +1,7 @@
 function evenNumbers(array, number) {
   //initialize an array on where to store my even number
   const evenNarr = [];
-  ///looop through the array starting from the end of an array
+  ///looop through the array pushing the even numbers into the array initialized
   for (let i = 0; i < array.length; i++) {
     if (array[i] % 2 === 0) {
       evenNarr.push(array[i]);

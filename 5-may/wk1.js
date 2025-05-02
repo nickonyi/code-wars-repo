@@ -7,8 +7,8 @@ function evenNumbers(array, number) {
       evenNarr.push(array[i]);
     }
   }
-  return evenNarr;
   //return the array according to the number received in the argument
+  return evenNarr.slice(-number);
 }
 
 console.log(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));

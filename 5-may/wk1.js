@@ -37,5 +37,3 @@ function solve(s) {
     return s.toLowerCase();
   }
 }
-
-console.log(solve('CODe'));

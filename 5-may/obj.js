@@ -26,6 +26,6 @@ let numbers = [1, 2, 3, 4, 5];
 const wod = [];
 console.log(numbers.sum());
 console.log(numbers.cube());
-console.log(wod.average());
+console.log(numbers.average());
 console.log(numbers.even());
 console.log(numbers.odd());

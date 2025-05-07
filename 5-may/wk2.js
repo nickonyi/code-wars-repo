@@ -29,4 +29,11 @@ function dashatize(num) {
     .replace(/(^-|-$)/g, '');
 }
 
-console.log(dashatize(68251));
+function balancedNum(number) {
+  //convert the number into a string array
+  const numbStr = String(number);
+  //find the middle number
+  //add numbers to the left of the array
+  //add numbers to the right of the middle element
+  //compare the two if they are equal return balance otherwise they are unbalanced
+}

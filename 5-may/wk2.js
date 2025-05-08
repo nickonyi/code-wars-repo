@@ -87,5 +87,10 @@ function sortMyString(S) {
     }
   }
   //return spaced  characters startng with even index and then odd index
-  return [evenArr, oddArr];
+  const result = [evenArr.join(''), oddArr.join('')].join(' ');
+
+  return result;
 }
+
+console.log(sortMyString('CodeWars'));
+console.log(sortMyString("YCOLUE'VREER"));

@@ -72,4 +72,20 @@ const splitAroundMiddle = (arr) => {
   }
 };
 
-console.log(balancedNum(56239814));
+function sortMyString(S) {
+  // your code here
+  //create an array to store even indexed characters
+  const evenArr = [];
+  //create an array to store odd indexed characters
+  const oddArr = [];
+  //loop trhrough the array and store the different indexed charactrers in their place
+  for (let i = 0; i < S.length; i++) {
+    if (i % 2 == 0) {
+      evenArr.push(S[i]);
+    } else {
+      oddArr.push(S[i]);
+    }
+  }
+  //return spaced  characters startng with even index and then odd index
+  return [evenArr, oddArr];
+}

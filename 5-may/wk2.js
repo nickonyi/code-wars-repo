@@ -92,5 +92,12 @@ function sortMyString(S) {
   return result;
 }
 
-console.log(sortMyString('CodeWars'));
-console.log(sortMyString("YCOLUE'VREER"));
+Array.range = function (start, count) {
+  return this.from({ length: count }, (_, i) => i + start);
+};
+
+Array.prototype.sum = function () {
+  return this.reduce((acc, num) => acc + num, 0);
+};
+
+console.log(Array.range(0, 3).sum());

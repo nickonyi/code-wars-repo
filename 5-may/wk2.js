@@ -111,7 +111,7 @@ var SequenceSum = (function () {
     let numString = '';
     while (num <= count) {
       sum += num;
-      numString += num;
+      numString += num + '+';
       num++;
     }
     return numString + '=' + sum;

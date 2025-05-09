@@ -106,6 +106,15 @@ var SequenceSum = (function () {
   SequenceSum.showSequence = function (count) {
     // for
     //while
+    let sum = 0;
+    let num = 0;
+    let numString = '';
+    while (num <= count) {
+      sum += num;
+      numString += num;
+      num++;
+    }
+    return numString + '=' + sum;
   };
 
   return SequenceSum;

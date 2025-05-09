@@ -100,4 +100,13 @@ Array.prototype.sum = function () {
   return this.reduce((acc, num) => acc + num, 0);
 };
 
-console.log(Array.range(0, 3).sum());
+var SequenceSum = (function () {
+  function SequenceSum() {}
+
+  SequenceSum.showSequence = function (count) {
+    // for
+    //while
+  };
+
+  return SequenceSum;
+})();

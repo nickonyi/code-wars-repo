@@ -114,8 +114,14 @@ var SequenceSum = (function () {
       numString += num + '+';
       num++;
     }
-    return numString + '=' + sum;
+    return count < 0
+      ? `${count}<0`
+      : count == 0
+      ? numString.replace(/\+$/, '') + '=' + sum
+      : numString.replace(/\+$/, '') + ' = ' + sum;
   };
 
   return SequenceSum;
 })();
+
+console.log(SequenceSum.showSequence(-1));

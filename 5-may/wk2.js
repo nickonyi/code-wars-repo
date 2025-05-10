@@ -125,5 +125,18 @@ var SequenceSum = (function () {
 })();
 
 function adjacentElementsProduct(array) {
-  return 0;
+  //define a maxmum array
+  //loop through the array
+  //multiply two adjacent its and compare it to the maxmum variable
+  //if it is the maximum set it as the maximum
+  let max = 0;
+  for (let i = 0; i < array.length; i++) {
+    let element = array[i] * array[i + 1];
+    if (element > max) {
+      max = element;
+    }
+  }
+  return max;
 }
+
+console.log(adjacentElementsProduct([-23, 4, -5, 99, -27, 329, -2, 7, -921]));

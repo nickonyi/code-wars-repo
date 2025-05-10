@@ -129,7 +129,7 @@ function adjacentElementsProduct(array) {
   //loop through the array
   //multiply two adjacent its and compare it to the maxmum variable
   //if it is the maximum set it as the maximum
-  let max = 0;
+  let max = array[0] * array[1];
   for (let i = 0; i < array.length; i++) {
     let element = array[i] * array[i + 1];
     if (element > max) {

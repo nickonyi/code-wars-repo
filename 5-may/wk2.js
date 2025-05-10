@@ -124,4 +124,6 @@ var SequenceSum = (function () {
   return SequenceSum;
 })();
 
-console.log(SequenceSum.showSequence(-1));
+function adjacentElementsProduct(array) {
+  return 0;
+}

@@ -142,5 +142,21 @@ function adjacentElementsProduct(array) {
 console.log(adjacentElementsProduct([-23, 4, -5, 99, -27, 329, -2, 7, -921]));
 
 function automorphic(n) {
+  //get the square of the number and store it in an array
+  const numberS = String(n).split('');
+  const square = n * n;
+  //extract the last items of the square
+  const lastDigit = String(square)
+    .split('')
+    .splice(-numberS.length)
+    .map(Number)
+    .join('');
+
+  if (n == lastDigit) {
+    return 'Automorphic';
+  }
+
   return 'Not!!'; // your code here
 }
+
+console.log(automorphic(625));

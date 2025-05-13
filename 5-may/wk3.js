@@ -2,14 +2,16 @@ function upArray(arr) {
   // ...
   //combine the values of the array into a single digit
 
-  let number = Number(arr.join(''));
-  console.log(number);
-
+  let number = BigInt(arr.join(''));
   //add one to the single digit
-  number = number + 1;
+  number = number + 1n;
+  number = number.toString();
+
   //return the array of individual values
 
-  return arr[0] == 0 ? [0, number] : String(number).split('').map(Number);
+  return arr[0] == 0
+    ? [0, Number(number)]
+    : String(number).split('').map(Number);
 }
 
 //console.log(upArray([4, 3, 2, 5]));

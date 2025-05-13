@@ -1,20 +1,20 @@
 function upArray(arr) {
-  // ...
-  //combine the values of the array into a single digit
+  if (
+    !arr ||
+    arr.length === 0 ||
+    arr.some((d) => d < 0 || d > 9 || !Number.isInteger(d))
+  ) {
+    return null; // Handle invalid input
+  }
 
   let number = BigInt(arr.join(''));
-  //add one to the single digit
-  number = number + 1n;
-  number = number.toString();
+  number += 1n;
 
-  //return the array of individual values
-
-  return arr[0] == 0
-    ? [0, Number(number)]
-    : String(number).split('').map(Number);
+  // Convert the result back to an array of Numbers (not BigInts)
+  return number.toString().split('').map(Number);
 }
-
 //console.log(upArray([4, 3, 2, 5]));
 console.log(
   upArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
 );
+console.log([0, 7]);

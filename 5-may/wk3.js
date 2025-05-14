@@ -29,9 +29,9 @@ function outed(meet, boss) {
     hapinness.push(meet[key]);
   }
   //get the average hapiness ratngg
-  const hapinnessRating = Math.floor(
-    hapinness.reduce((a, b) => a + b, 0) / hapinness.length
-  );
+  const hapinnessRating =
+    hapinness.reduce((a, b) => a + b, 0) / hapinness.length;
+
   //determine if you leave the room or not
   if (hapinnessRating <= 5) {
     return 'Get Out Now!';
@@ -40,21 +40,40 @@ function outed(meet, boss) {
   }
 }
 
+//console.log(
+//  outed(
+//    {
+//      tim: 0,
+//      jim: 2,
+//      randy: 0,
+//      sandy: 7,
+//      andy: 0,
+//      katie: 5,
+//      laura: 1,
+//      saajid: 2,
+//      alex: 3,
+//      john: 2,
+//      mr: 0,
+//    },
+//    'laura'
+//  )
+//);
+
 console.log(
   outed(
     {
-      tim: 0,
-      jim: 2,
-      randy: 0,
-      sandy: 7,
-      andy: 0,
-      katie: 5,
-      laura: 1,
-      saajid: 2,
-      alex: 3,
-      john: 2,
-      mr: 0,
+      tim: 7,
+      jim: 6,
+      randy: 9,
+      sandy: 1,
+      andy: 1,
+      katie: 2,
+      laura: 3,
+      saajid: 5,
+      alex: 6,
+      john: 8,
+      mr: 8,
     },
-    'laura'
+    'randy'
   )
 );

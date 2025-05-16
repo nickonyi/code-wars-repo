@@ -73,6 +73,7 @@ console.log(
       alex: 6,
       john: 8,
       mr: 8,
+      doctot: 3,
     },
     'randy'
   )

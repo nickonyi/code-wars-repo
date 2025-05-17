@@ -78,3 +78,8 @@ console.log(
     'randy'
   )
 );
+
+function fuelPrice(litres, pricePerLitre) {
+  // your code here
+  // Good luck with it!
+}

@@ -21,3 +21,6 @@ function abbreviate(string) {
 }
 
 console.log(abbreviate('elephant-rides are really fun!'));
+function lovefunc(flower1, flower2) {
+  // moment of truth
+}

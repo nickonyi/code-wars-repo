@@ -1,25 +1,17 @@
 function stockList(books, categories) {
-  let total = categories.reduce((acc, cat) => {
-    acc[cat] = 0;
-    return acc;
-  }, {});
-
-  let result = '';
+  if (!books.length) return '';
+  const total = {};
 
   books.forEach((book) => {
-    const [code, qty] = book.split(' ');
-    const letter = code[0];
-    const amount = Number(qty);
-
-    total[letter] = (total[letter] || 0) + amount;
+    let cat = book[0];
+    total[cat] = (total[cat] || 0) + +book.split(' ')[1];
   });
 
-  for (const letter in total) {
-    result += `(${letter}:${total[letter]}) -`;
-  }
-
-  result = result.slice(0, -1);
-  return result;
+  return categories
+    .map((cat) => {
+      return `(${cat} : ${total[cat] || 0})`;
+    })
+    .join('-');
 }
 
 console.log(
@@ -28,3 +20,12 @@ console.log(
     ['A', 'B', 'C', 'D']
   )
 );
+
+console.log(
+  stockList(
+    ['ABAR 200', 'CDXE 500', 'BKWR 250', 'BTSQ 890', 'DRTY 600'],
+    ['A', 'B']
+  )
+);
+
+console.log(stockList([], ['A', 'B']));

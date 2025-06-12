@@ -66,3 +66,7 @@ console.log(presses('we'));
 console.log(presses('0123456789'));
 console.log(presses('01234*#56789'));
 console.log(presses('HOW R U'));
+
+function movie(card, ticket, perc) {
+  // your code
+}

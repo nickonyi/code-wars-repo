@@ -61,12 +61,29 @@ function presses(phrase) {
   return keyTracker;
 }
 
-console.log(presses('LOL'));
-console.log(presses('we'));
-console.log(presses('0123456789'));
-console.log(presses('01234*#56789'));
-console.log(presses('HOW R U'));
+//console.log(presses('LOL'));
+//console.log(presses('we'));
+//console.log(presses('0123456789'));
+//console.log(presses('01234*#56789'));
+//console.log(presses('HOW R U'));
 
 function movie(card, ticket, perc) {
-  // your code
+  let totalA = 0;
+  let totalB = card;
+  let n = 0;
+  let prevTicketPrice = ticket; // tracks the price of the next ticket in System B
+
+  while (true) {
+    totalA += ticket;
+    prevTicketPrice *= perc;
+    totalB += prevTicketPrice;
+    n++;
+    if (Math.ceil(totalB) < totalA) {
+      return n;
+    }
+  }
+}
+
+function sumTriangularNumbers(n) {
+  return 0;
 }

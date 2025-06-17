@@ -85,5 +85,5 @@ function movie(card, ticket, perc) {
 }
 
 function sumTriangularNumbers(n) {
-  return 0 + 1 + 2 + 3;
+  return 0 + 1 + 2 + 3 + 5;
 }

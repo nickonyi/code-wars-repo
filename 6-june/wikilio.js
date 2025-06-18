@@ -84,6 +84,6 @@ function movie(card, ticket, perc) {
   }
 }
 
-function sumTriangularNumbers(n) {
-  return 0 + 1 + 2 + 3 + 5;
+function findLongest(array){
+  // code here
 }

@@ -84,6 +84,7 @@ function movie(card, ticket, perc) {
   }
 }
 
-function findLongest(array){
+function findLongest(array) {
   // code here
+  return array.reduce((a, b) => (String(b).length > String(a).length ? b : a));
 }

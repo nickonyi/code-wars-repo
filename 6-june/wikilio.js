@@ -88,3 +88,11 @@ function findLongest(array) {
   // code here
   return array.reduce((a, b) => (String(b).length > String(a).length ? b : a));
 }
+
+function spEng(sentence) {
+  //write your code here
+  sentence = sentence.toLowerCase();
+  return sentence.includes('english');
+}
+
+console.log(spEng('asenglaish'));

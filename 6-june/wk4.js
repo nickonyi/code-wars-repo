@@ -11,7 +11,6 @@ function race(v1, v2, g) {
 
   return [hours, minutes, seconds];
 }
-
-console.log(race(720, 850, 70));
-console.log(race(720, 850, 37));
-console.log(race(80, 91, 37));
+function solve(s) {
+  //..
+}

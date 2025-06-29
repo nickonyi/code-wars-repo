@@ -36,5 +36,15 @@ function solve(s) {
   return [cap, small, nums, specialChars];
 }
 
+//refactoring of the code
+
+const solveRefactor = (x) => {
+  const u = (x.match(/[A-Z]/g) || []).length;
+  const l = (x.match(/[a-z]/g) || []).length;
+  const n = (x.match(/[0-9]/g) || []).length;
+  const s = (x.match(/[^A-Z0-9]/gi) || []).length;
+
+  return [u, l, n, s];
+};
 console.log(solve('aAbBcC'));
-console.log(solve(''));
+console.log(solveRefactor('aAbBcC'));

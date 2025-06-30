@@ -48,3 +48,7 @@ const solveRefactor = (x) => {
 };
 console.log(solve('aAbBcC'));
 console.log(solveRefactor('aAbBcC'));
+
+function tidyNumber(n){
+  //your code here
+}

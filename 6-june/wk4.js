@@ -49,6 +49,12 @@ const solveRefactor = (x) => {
 console.log(solve('aAbBcC'));
 console.log(solveRefactor('aAbBcC'));
 
-function tidyNumber(n){
-  //your code here
+function tidyNumber(num) {
+  const arr = String(num).split('').map(Number);
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i + 1]) return false;
+  }
+  return true;
 }
+
+console.log(tidyNumber(28099940));

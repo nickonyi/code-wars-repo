@@ -4,8 +4,22 @@ function multiplyAll(arr) {
   };
 }
 
-function maxTriSum(numbers) {
+function maxTriSum(numbers, size = 3) {
   //your code here
+  const unique = [...new Set(numbers)];
+  console.log(unique);
+
+  const arrN = getCombinations(unique, size);
+  console.log(arrN);
+
+  let max = 0;
+  arrN.forEach((arr) => {
+    let sum = arr.reduce((a, b) => a + b, 0);
+    if (sum > max) {
+      max = sum;
+    }
+  });
+  return max;
 }
 
 function getCombinations(arr, size) {
@@ -26,3 +40,4 @@ function getCombinations(arr, size) {
   backtrack(0, []);
   return result;
 }
+console.log(maxTriSum([-13, -50, 57, 13, 67, -13, 57, 108, 67]));

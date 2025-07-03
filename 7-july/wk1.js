@@ -58,4 +58,14 @@ function maxTriSum(numbers) {
 
 const sequenceSum = (begin, end, step) => {
   // May the Force be with you
+  const result = [];
+  if (begin > end) return 0;
+
+  for (let i = begin; i <= end; i += step) {
+    result.push(i);
+  }
+
+  return result.reduce((a, b) => a + b);
 };
+
+console.log(sequenceSum(1, 5, 3));

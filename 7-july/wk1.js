@@ -54,4 +54,8 @@ function maxTriSum(numbers) {
   const sum = slice.reduce((a, b) => a + b);
   return sum;
 }
-console.log(maxTriSum([-13, -50, 57, 13, 67, -13, 57, 108, 67]));
+//console.log(maxTriSum([-13, -50, 57, 13, 67, -13, 57, 108, 67]));
+
+const sequenceSum = (begin, end, step) => {
+  // May the Force be with you
+};

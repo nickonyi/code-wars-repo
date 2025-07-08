@@ -69,4 +69,54 @@ const sequenceSum = (begin, end, step) => {
 };
 function boredom(staff) {
   // how bored are you ??
+  //define an accumulator variable
+  let accumulator = 0;
+  //loop over the object and obtain the different departments
+  for (const key in staff) {
+    if (staff[key] === 'accounts') {
+      accumulator += 1;
+    } else if (staff[key] === 'finance') {
+      accumulator += 2;
+    } else if (staff[key] === 'canteen') {
+      accumulator += 10;
+    } else if (staff[key] === 'regulation') {
+      accumulator += 3;
+    } else if (staff[key] === 'trading') {
+      accumulator += 6;
+    } else if (staff[key] === 'change') {
+      accumulator += 6;
+    } else if (staff[key] === 'IS') {
+      accumulator += 8;
+    } else if (staff[key] === 'retail') {
+      accumulator += 5;
+    } else if (staff[key] === 'cleaning') {
+      accumulator += 4;
+    } else if (staff[key] === 'pissing about') {
+      accumulator += 25;
+    }
+  }
+  //return the total and return the correct sentiment based on the total
+  if (accumulator <= 80) {
+    return 'kill me now';
+  } else if (accumulator < 100 && accumulator > 80) {
+    return 'i can handle this';
+  } else if (accumulator > 100) {
+    return 'party time!!';
+  }
 }
+
+console.log(
+  boredom({
+    tim: 'IS',
+    jim: 'finance',
+    randy: 'pissing about',
+    sandy: 'cleaning',
+    andy: 'cleaning',
+    katie: 'cleaning',
+    laura: 'pissing about',
+    saajid: 'regulation',
+    alex: 'regulation',
+    john: 'accounts',
+    mr: 'canteen',
+  })
+);

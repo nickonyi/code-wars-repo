@@ -67,5 +67,6 @@ const sequenceSum = (begin, end, step) => {
 
   return result.reduce((a, b) => a + b);
 };
-
-console.log(sequenceSum(1, 5, 3));
+function boredom(staff) {
+  // how bored are you ??
+}

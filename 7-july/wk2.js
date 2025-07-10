@@ -42,4 +42,9 @@ function nbMonths(
   return [months, Math.round(oldPrice + savings - newPrice)];
 }
 
-console.log(nbMonths(2000, 8000, 1000, 1.5));
+//console.log(nbMonths(2000, 8000, 1000, 1.5));
+
+function alphabetWar(fight)
+{
+   return "Let's fight again!";
+}

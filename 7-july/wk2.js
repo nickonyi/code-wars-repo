@@ -44,7 +44,42 @@ function nbMonths(
 
 //console.log(nbMonths(2000, 8000, 1000, 1.5));
 
-function alphabetWar(fight)
-{
-   return "Let's fight again!";
+function alphabetWar(fight) {
+  //turn the strng to a proper array
+  const fightArr = fight.split('');
+
+  //map the  different letters wth their powers
+  const powerValues = {
+    w: 4,
+    p: 3,
+    b: 2,
+    s: 1,
+    m: 4,
+    q: 3,
+    d: 2,
+    z: 1,
+  };
+
+  //separate the participants from the left and right camps
+  const leftSide = ['w', 'p', 'b', 's'];
+  const rightSide = ['m', 'q', 'd', 'z'];
+  const leftLetters = fightArr.filter((char) => leftSide.includes(char));
+  const rightLetters = fightArr.filter((char) => rightSide.includes(char));
+
+  const leftValues = leftLetters.map((letter) => powerValues[letter]);
+  const rightValues = rightLetters.map((letter) => powerValues[letter]);
+
+  ////add the total to see who wins the fight
+  const leftSum = leftValues.reduce((a, b) => a + b, 0);
+  const rightSum = rightValues.reduce((a, b) => a + b, 0);
+
+  //return the apprpriate message between the ones who win the fight
+
+  return leftSum > rightSum
+    ? 'Left side wins!'
+    : rightSum > leftSum
+    ? 'Right side wins!,'
+    : "Let's fight again!";
 }
+
+console.log(alphabetWar('z'));

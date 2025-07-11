@@ -86,4 +86,7 @@ function alphabetWar(fight) {
 
 function nthSmallest(arr, pos) {
   //your code here
+  const sortedArr = arr.sort((a, b) => a - b);
+
+  return arr[pos - 1];
 }

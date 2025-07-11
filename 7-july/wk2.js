@@ -82,4 +82,8 @@ function alphabetWar(fight) {
     : "Let's fight again!";
 }
 
-console.log(alphabetWar('z'));
+//console.log(alphabetWar('z'));
+
+function nthSmallest(arr, pos) {
+  //your code here
+}

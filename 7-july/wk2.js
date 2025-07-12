@@ -108,4 +108,11 @@ function min(arr, toReturn) {
   return toReturn === 'value' ? min : index;
 }
 
-console.log(min([500, 250, 750, 5000, 1000, 230], 'v'));
+//min refactored
+function minRe(arr, toReturn) {
+  return toReturn === 'value'
+    ? Math.min(...arr)
+    : arr.indexOf(Math.min(...arr));
+}
+
+console.log(minRe([500, 250, 750, 5000, 1000, 230], 'value'));

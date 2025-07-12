@@ -90,3 +90,22 @@ function nthSmallest(arr, pos) {
 
   return arr[pos - 1];
 }
+
+function min(arr, toReturn) {
+  //
+  if (arr.length === 0) return null;
+
+  let min = arr[0];
+  let index = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+      index = i;
+    }
+  }
+
+  return toReturn === 'value' ? min : index;
+}
+
+console.log(min([500, 250, 750, 5000, 1000, 230], 'v'));

@@ -20,5 +20,5 @@ function solve(arr){
   })
   //count the letters that are in their relative position
   //return the result array
-return  result;
+ return  result;
 };

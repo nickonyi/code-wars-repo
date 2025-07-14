@@ -14,7 +14,7 @@ function solve(arr){
     wordStr.forEach((char,index)=>{
         if(index+1 === char.charCodeAt(0)){
             count++;
-            result.push(code);
+            result.push(count);
         }
     })
   })
@@ -22,3 +22,5 @@ function solve(arr){
   //return the result array
  return  result;
 };
+
+console.log(solve(["abdjssjc","abcde","acedfjh"]));

@@ -2,25 +2,13 @@ function sumDigPow(a, b) {
   // Your code here
 }
 
-function solve(arr){  
-  //code
-  //define a count variable
-  let count = 0;
-  //define the result array
-  let result = [];
-  //loop over the array and determine the positon of the strings relative to their alphabet position
-  arr.forEach((word)=>{
-    let wordStr = word.split('');
-    wordStr.forEach((char,index)=>{
-        if(index+1 === char.charCodeAt(0)){
-            count++;
-            result.push(count);
-        }
-    })
-  })
-  //count the letters that are in their relative position
-  //return the result array
- return  result;
-};
-
-console.log(solve(["abdjssjc","abcde","acedfjh"]));
+function vaporcode(string) {
+ //jooin if there are spaces
+ let newString = string.join(' ');
+  //turn to upppercase
+  newString = newString.toUpperCase();
+ //add the spaces
+ const result = newString.join('  ');
+ //return the string 
+ return result;
+}

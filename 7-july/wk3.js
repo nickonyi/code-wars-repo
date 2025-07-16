@@ -47,6 +47,28 @@ const menFromBoys = (arr) => {
 
 //console.log(menFromBoys([1, 2, 3, 3, 4, 5, 6, 7, 8]));
 
-function overTheRoad(address, n) {
+function overTheRoadOld(address, n) {
   //code here
+  let arr = [];
+  for (let i = 1; i <= n * 2; i++) {
+    arr.push(i);
+  }
+  //create an array of even and odd numbers
+  const odd = arr.filter((a) => a % 2).sort((a, b) => b - a);
+  const even = arr.filter((a) => a % 2 === 0);
+
+  //reverse the odd numbers
+  //given a number obtain its index and use it to retreve the number from the opposit side
+  if (address % 2 == 0) {
+    return odd[even.indexOf(address)];
+  } else {
+    return even[odd.indexOf(address)];
+  }
 }
+
+///refactored
+const overTheRoad = (address, n) => {
+  return 2 * n + 1 - address;
+};
+
+console.log(overTheRoad(23633656673, 310027696726));

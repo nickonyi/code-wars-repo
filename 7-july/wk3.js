@@ -72,3 +72,22 @@ const overTheRoad = (address, n) => {
 };
 
 console.log(overTheRoad(23633656673, 310027696726));
+
+function vowel2index(str) {
+  //code me
+  //create an array of vowels
+  const vowels = "aeiouAEIOU";
+  //turn the string to an array
+  const strArr = str.split("");
+  //looks if the character in the array is a vowel and then replace it with the postion
+  const result = strArr
+    .map((c, i) => {
+      return vowels.includes(c) ? (i + 1).toString() : c;
+    })
+    .join("");
+
+  //return the new strng
+  return result;
+}
+
+console.log(vowel2index("this is my string"));

@@ -90,4 +90,4 @@ function vowel2index(str) {
   return result;
 }
 
-console.log(vowel2index("this is my strihcjdhcjdhcjsng"));
+console.log(vowel2index("this is my strihcjdhhshshcjdhcjsng"));

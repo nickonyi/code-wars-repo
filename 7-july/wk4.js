@@ -7,5 +7,16 @@ function reverse(arr) {
 }
 
 function seven(m) {
-  // your code
+  let steps = 0;
+
+  while (m >= 100) {
+    let lastDigit = m % 10;
+    let rest = Math.floor(m / 10);
+    m = rest - lastDigit * 2;
+    steps++;
+  }
+
+  return [m, steps];
 }
+
+console.log(seven(1021));

@@ -5,3 +5,7 @@ function reverse(arr) {
   }
   return result;
 }
+
+function seven(m) {
+  // your code
+}

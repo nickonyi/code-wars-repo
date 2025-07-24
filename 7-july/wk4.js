@@ -23,7 +23,18 @@ function seven(m) {
 
 function containAllRots(strng, arr) {
   // your code
-  //define the rotation checker
-  //loop through the array
-  //check
+  //define an array
+  let rotations = [];
+  //get all the rotations of the strng and add it  into an array
+  for (let i = 0; i < strng.length; i++) {
+    strng = strng.slice(-1) + strng.slice(0, -1);
+    rotations.push(strng);
+  }
+  //check if what we have in  a rotation is what we have in an array
+  //then return true if we have all the rotations and false if we don't
+  return rotations.every((item) => arr.includes(item));
 }
+
+console.log(
+  containAllRots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"])
+);

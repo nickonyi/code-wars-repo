@@ -19,4 +19,11 @@ function seven(m) {
   return [m, steps];
 }
 
-console.log(seven(1021));
+//we are looking if all rotations of the string is included in the array
+
+function containAllRots(strng, arr) {
+  // your code
+  //define the rotation checker
+  //loop through the array
+  //check
+}

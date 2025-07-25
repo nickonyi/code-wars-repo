@@ -39,4 +39,38 @@ console.log(
   containAllRots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"])
 );
 
-function switcher(x) {}
+///given an array of numbers with a being 26 and z 1 find the character equivalent
+function switcher(x) {
+  //loop over the array
+  //find its number equivalent
+  const mapping = { 27: "!", 28: "?", 29: " " };
+
+  const letters = x
+    .map((c) => {
+      if (c >= 1 && c <= 26) {
+        return String.fromCharCode(27 - c + 96);
+      } else {
+        return mapping[c];
+      }
+    })
+    .join("");
+  return letters;
+}
+
+console.log(
+  switcher([
+    "25",
+    "7",
+    "8",
+    "4",
+    "14",
+    "23",
+    "8",
+    "25",
+    "23",
+    "29",
+    "16",
+    "16",
+    "4",
+  ])
+);

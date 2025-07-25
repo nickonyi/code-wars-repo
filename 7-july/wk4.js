@@ -38,3 +38,5 @@ function containAllRots(strng, arr) {
 console.log(
   containAllRots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"])
 );
+
+function switcher(x) {}

@@ -22,10 +22,24 @@ Player.prototype.getMarker = function () {
 Player.prototype = Person.prototype;
 //console.log(Object.getPrototypeOf(Player.prototype));
 
-const player1 = new Player("Malcom", "x");
-const player2 = new Player("Joel", "O");
+function Enemy(name) {
+  this.name = name;
+  this.marker = "^";
+}
 
-player1.sayName();
-player1.getMarker();
-player2.sayName();
-player2.getMarker();
+Enemy.prototype = Person.prototype;
+Enemy.prototype.sayName = function () {
+  console.log("Ni kudiambo!");
+};
+
+const Player1 = new Player("Max", "x");
+Player1.sayName();
+
+let car = {
+  brand: "Honda",
+  getBrand: function () {
+    return this.brand;
+  },
+};
+
+console.log(car.getBrand()); // Honda

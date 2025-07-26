@@ -74,3 +74,21 @@ console.log(
     "4",
   ])
 );
+
+//given an input round it to the next multiple of 5
+function roundToNext5(n) {
+  let remainder = n % 5;
+  if (remainder === 0) return n;
+
+  if (n > 0) {
+    return n + (5 - remainder);
+  } else {
+    return n - remainder;
+  }
+}
+
+console.log(roundToNext5(-2));
+
+console.log(Math.ceil(-2 / 5));
+console.log(Math.floor(-2 / 5));
+console.log(-2 / 5);

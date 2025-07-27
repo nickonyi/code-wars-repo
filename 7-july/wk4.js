@@ -92,3 +92,15 @@ console.log(roundToNext5(-2));
 console.log(Math.ceil(-2 / 5));
 console.log(Math.floor(-2 / 5));
 console.log(-2 / 5);
+
+//given a string return where each digit is repeated a number of times equal to ts value
+function explode(s) {
+  let result = [];
+
+  for (let i = 0; i < s.length; i++) {
+    result.push(s[i].repeat(s[i]));
+  }
+  return result.join("");
+}
+
+console.log(explode("312"));

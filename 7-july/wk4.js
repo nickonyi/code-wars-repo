@@ -57,23 +57,23 @@ function switcher(x) {
   return letters;
 }
 
-console.log(
-  switcher([
-    "25",
-    "7",
-    "8",
-    "4",
-    "14",
-    "23",
-    "8",
-    "25",
-    "23",
-    "29",
-    "16",
-    "16",
-    "4",
-  ])
-);
+//console.log(
+//  switcher([
+//    "25",
+//    "7",
+//    "8",
+//    "4",
+//    "14",
+//    "23",
+//    "8",
+//    "25",
+//    "23",
+//    "29",
+//    "16",
+//    "16",
+//    "4",
+//  ])
+//);
 
 //given an input round it to the next multiple of 5
 function roundToNext5(n) {
@@ -87,11 +87,11 @@ function roundToNext5(n) {
   }
 }
 
-console.log(roundToNext5(-2));
-
-console.log(Math.ceil(-2 / 5));
-console.log(Math.floor(-2 / 5));
-console.log(-2 / 5);
+//console.log(roundToNext5(-2));
+//
+//console.log(Math.ceil(-2 / 5));
+//console.log(Math.floor(-2 / 5));
+//console.log(-2 / 5);
 
 //given a string return where each digit is repeated a number of times equal to ts value
 function explode(s) {
@@ -103,4 +103,26 @@ function explode(s) {
   return result.join("");
 }
 
-console.log(explode("312"));
+//console.log(explode("312"));
+
+//summ the differences between consercutive pairs in descending order
+function sumOfDifferencess(arr) {
+  if (arr.length === 0 || arr.length === 1) {
+    return 0;
+  }
+
+  //sort the array in decending order
+  const arrr = arr.sort((a, b) => b - a);
+  //sum two consercutive pairs then subtract
+  //define a result array
+  let result = 0;
+  for (let i = 0; i < arrr.length - 1; i++) {
+    result += arrr[i] - arrr[i + 1];
+  }
+  return result;
+}
+
+const sumOfDifferences = (arr) =>
+  arr.sort((a, b) => b - a).map((a, i) => a - arr[i + 1] || 0);
+
+console.log(sumOfDifferences([2, 3, 1, 10]));

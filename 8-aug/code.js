@@ -18,6 +18,15 @@ const remove = (integer_list, values_list) => {
 };
 
 console.log(remove([1, 1, 2, 3, 1, 2, 3, 4], [1, 3]));
+
+//return the difference between the largest and smallest value in an array
 function maxDiff(list) {
-  return 0;
+  //if the list is empty or has one item return 0
+  if (list.length <= 1) return 0;
+  //find the smallest item in the array
+  const min = Math.min(...list);
+  //find the largest item in the array
+  const max = Math.max(...list);
+  //return the difference
+  return max - min;
 }

@@ -18,3 +18,6 @@ const remove = (integer_list, values_list) => {
 };
 
 console.log(remove([1, 1, 2, 3, 1, 2, 3, 4], [1, 3]));
+function maxDiff(list) {
+  return 0;
+}

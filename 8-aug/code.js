@@ -66,4 +66,26 @@ const encodeRe = (str, n) => {
     .map((char, i) => char.charCodeAt(0) - 96 + +key[i % key.length]);
 };
 console.log(encodeRe("scout", 1939));
-function foldTo(distance) {}
+function foldTo(distance) {
+  if (distance < 0 || !Number.isInteger(distance)) return null;
+  let paperThickness = 0.0001;
+  let fold = 0;
+  while (paperThickness < distance) {
+    paperThickness *= 2;
+    fold++;
+  }
+  return fold;
+}
+
+function partlist(arr) {
+  // your code
+  let result = [];
+  for (let i = 1; i < arr.length; i++) {
+    let left = arr.slice(0, i).join(" ");
+    let right = arr.slice(i).join(" ");
+    result.push([left, right]);
+  }
+  return result;
+}
+
+console.log(partlist(["I", "wish", "I", "hadn't", "come"]));

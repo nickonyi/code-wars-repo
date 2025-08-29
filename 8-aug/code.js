@@ -30,3 +30,40 @@ function maxDiff(list) {
   //return the difference
   return max - min;
 }
+
+//function that accepts a string and a key and returns an array of numbers representing the encoded string
+function encode(str, n) {
+  //define an arrayto hold the converted strin
+  let strN = [];
+  //loop through every character in the string
+  for (let i = 0; i < str.length; i++) {
+    //for each letter in the array turn into its number equilavent
+
+    const num = Number(str[i].charCodeAt(0)) - 96;
+    strN.push(num);
+  }
+  //add the key to my new number array
+  let key = String(n)
+    .split("")
+    .map((i) => Number(i));
+  //compare the key and the str to make sure they are the same length
+  let i = 0;
+  while (key.length < strN.length) {
+    key.push(key[i % key.length]);
+    i++;
+  }
+
+  const encoded = strN.map((num, i) => num + key[i]);
+
+  //return the encoded array
+  return encoded;
+}
+//encode refacyored
+const encodeRe = (str, n) => {
+  let key = n.toString();
+  return str
+    .split("")
+    .map((char, i) => char.charCodeAt(0) - 96 + +key[i % key.length]);
+};
+console.log(encodeRe("scout", 1939));
+function foldTo(distance) {}

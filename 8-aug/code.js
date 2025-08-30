@@ -87,3 +87,22 @@ function partlist(arr) {
   }
   return result;
 }
+
+function last(x) {
+  //take the string and turn into an array of words
+  const arr = x.split(" ");
+  //reverse each item on the array
+  const reverse = arr.map((x) => x.split("").reverse().join(""));
+  //sort and then the whole array
+  const sort = reverse.sort((a, b) => {
+    let firstA = a[0].toLowerCase();
+    let firstB = b[0].toLowerCase();
+    return firstA.localeCompare(firstB);
+  });
+  //reverse it back
+  const words = sort.map((x) => x.split("").reverse().join(""));
+  //return the new array
+  return words;
+}
+
+console.log(last("man i need a taxi up to ubud"));

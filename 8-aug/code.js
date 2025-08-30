@@ -87,5 +87,3 @@ function partlist(arr) {
   }
   return result;
 }
-
-console.log(partlist(["I", "wish", "I", "hadn't", "come"]));

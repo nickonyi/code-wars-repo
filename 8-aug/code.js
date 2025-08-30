@@ -87,7 +87,7 @@ function partlist(arr) {
   }
   return result;
 }
-
+//sort the string of words on the basis of the lasrt letter in a word
 function last(x) {
   //take the string and turn into an array of words
   const arr = x.split(" ");
@@ -105,4 +105,11 @@ function last(x) {
   return words;
 }
 
-console.log(last("man i need a taxi up to ubud"));
+//last refactored
+const lastRe = (x) => {
+  return x
+    .split(" ")
+    .sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
+};
+
+console.log(lastRe("man i need a taxi up to ubud"));

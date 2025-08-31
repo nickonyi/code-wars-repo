@@ -141,8 +141,18 @@ function meeting(s) {
   return sort.map(([last, first]) => `(${last},${first})`).join("");
 }
 
+//meeting refactored
+const meetingRe = (s) => {
+  return s
+    .split(";")
+    .map((i) => i.toUpperCase().split(":").reverse().join(", "))
+    .sort()
+    .map((i) => `(${i})`)
+    .join("");
+};
+
 console.log(
-  meeting(
+  meetingRe(
     "Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill"
   )
 );

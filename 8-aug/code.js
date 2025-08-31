@@ -113,6 +113,36 @@ const lastRe = (x) => {
 };
 
 //console.log(lastRe("man i need a taxi up to ubud"));
+
+//sorts by last name
+//makes the string upercase
 function meeting(s) {
   // your code
+  let result = "";
+  //turn my string into a 2d array
+  let pairs = s.split(";").map((item) => {
+    let [first, last] = item.split(":");
+    return [last, first];
+  });
+  //turn all the strings in the array to uppercase
+  let capitalize = pairs.map((item) => {
+    return item.map((i) => i.toUpperCase());
+  });
+
+  //sort by last name if the last name are the same compare by first name
+  let sort = capitalize.sort((a, b) => {
+    const lastCompare = a[0].localeCompare(b[0]);
+    if (lastCompare !== 0) {
+      return lastCompare;
+    }
+    return a[1].localeCompare(b[1]);
+  });
+  //return a new string
+  return sort.map(([last, first]) => `(${last},${first})`).join("");
 }
+
+console.log(
+  meeting(
+    "Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill"
+  )
+);

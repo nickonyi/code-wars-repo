@@ -45,3 +45,30 @@ function stat(strg) {
   )} Median: ${formatTime(median)}`;
 }
 console.log(stat("02|15|59, 2|47|16, 02|17|20, 2|32|34, 2|32|34, 2|17|17"));
+
+//given an array of words return array of numbers of letters that occupy their number in the alphabet
+function solve(arr) {
+  //code
+  //convert the whole array to lowercase
+  arr = arr.map((word) => word.toLowerCase());
+  //define my result array
+  let result = [];
+
+  //loop through each word in the array
+  //and for each word compare the position of each letter in the array and their position in the alphabet
+  //if the position match increase the count
+  for (let i = 0; i < arr.length; i++) {
+    //define a counter variable
+    let counter = 0;
+    for (let j = 0; j < arr[i].length; j++) {
+      if (j === arr[i][j].charCodeAt(0) - 97) {
+        counter++;
+      }
+    }
+    result.push(counter);
+  }
+  return result;
+  //return our result array
+}
+
+console.log(solve(["abode", "ABc", "xyzD"]));

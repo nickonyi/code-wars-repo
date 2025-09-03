@@ -71,4 +71,22 @@ function solve(arr) {
   //return our result array
 }
 
-console.log(solve(["abode", "ABc", "xyzD"]));
+//console.log(solve(["abode", "ABc", "xyzD"]));
+
+//return the count of consercutive two pairs
+function pairs(ar) {
+  //..
+  //define a result array
+  let result = [];
+  //loop through the array and take groups of two consercutive items and push them to an array
+  for (let i = 0; i < ar.length - 1; i += 2) {
+    if (Math.abs(ar[i] - ar[i + 1]) === 1) {
+      result.push([ar[i], ar[i + 1]]);
+    }
+  }
+
+  //return the length of that array
+  return result.length;
+}
+
+console.log(pairs([1, 2, 5, 8, -4, -3, 7, 6, 5]));

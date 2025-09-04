@@ -89,4 +89,4 @@ function pairs(ar) {
   return result.length;
 }
 
-console.log(pairs([1, 2, 5, 8, -4, -3, 7, 6, 5]));
+console.log(pairs([1, 2, 5, 8, -4, -3, 7, 6, 5, 4]));

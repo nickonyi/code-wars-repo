@@ -90,3 +90,18 @@ function pairs(ar) {
 }
 
 console.log(pairs([1, 2, 5, 8, -4, -3, 7, 6, 5, 4]));
+
+//return the sum of triangular numbers upto the nth number
+function sumTriangularNumbers(n) {
+  if(n<1) return 0;
+  
+  let series = [];
+  let sum = 0;
+  for (let i = 1; i <=n; i++) {
+    sum = sum+i;
+    series.push(sum)
+    
+  }
+  return series;
+}
+

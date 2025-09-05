@@ -102,6 +102,7 @@ function sumTriangularNumbers(n) {
     series.push(sum)
     
   }
-  return series;
+  return series.reduce((a,b)=>a+b,0);
 }
 
+console.log(sumTriangularNumbers(5));

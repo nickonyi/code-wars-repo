@@ -14,3 +14,7 @@ function divCon(x) {
 console.log(divCon([9, 3, "7", "3"]));
 
 function catMouse(x) {}
+
+function arrayLeaders(numbers){
+  return [];
+}

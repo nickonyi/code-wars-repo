@@ -16,5 +16,14 @@ console.log(divCon([9, 3, "7", "3"]));
 function catMouse(x) {}
 
 function arrayLeaders(numbers){
-  return [];
+  //define a leader array
+  let leaders = [];
+  //loop through the array
+  for (let i = 0; i < numbers.length; i++) {
+   let num = numbers.slice(iS)
+    
+  }
+  //obtain the item and the rest of the array
+  //add the items to its right
+  //compare if it is greater than the sum to its right add to the result array
 }

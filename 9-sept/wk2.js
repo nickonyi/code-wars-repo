@@ -11,7 +11,7 @@ function divCon(x) {
   return sumNos - sumStrN;
 }
 
-console.log(divCon([9, 3, "7", "3"]));
+//console.log(divCon([9, 3, "7", "3"]));
 
 function catMouse(x) {}
 
@@ -20,10 +20,18 @@ function arrayLeaders(numbers){
   let leaders = [];
   //loop through the array
   for (let i = 0; i < numbers.length; i++) {
-   let num = numbers.slice(iS)
-    
-  }
-  //obtain the item and the rest of the array
+    //obtain the item and the rest of the array
   //add the items to its right
   //compare if it is greater than the sum to its right add to the result array
+   let num = numbers[i];
+   let sumNumbersRight = numbers.slice(i+1).reduce((a,b)=> a+b,0)
+   if (num > sumNumbersRight) {
+     leaders.push(num)
+   }
+    
+  }
+  
+  return leaders;
 }
+
+console.log(arrayLeaders([1,2,3,4,0]));

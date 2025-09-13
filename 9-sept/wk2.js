@@ -21,10 +21,10 @@ function arrayLeaders(numbers){
   //loop through the array
   for (let i = 0; i < numbers.length; i++) {
     //obtain the item and the rest of the array
-  //add the items to its right
-  //compare if it is greater than the sum to its right add to the result array
    let num = numbers[i];
+     //add the items to its right
    let sumNumbersRight = numbers.slice(i+1).reduce((a,b)=> a+b,0)
+     //compare if it is greater than the sum to its right add to the result array
    if (num > sumNumbersRight) {
      leaders.push(num)
    }

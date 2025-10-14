@@ -13,4 +13,19 @@ function divCon(x) {
 
 console.log(divCon([9, 3, "7", "3"]));
 
-function catMouse(x) {}
+//we want to see if the cat cathces the mouse
+function catMouse(x) {
+  //remove the first and last item
+  const steps = x.split("").slice(1, -1);
+  //check the length of the item
+  const stepsLength = steps.length;
+  //check if its below or equal to three return caught
+  //otherwise return escaped
+  if (stepsLength <= 3) {
+    return "Caught!";
+  } else {
+    return "Escaped!";
+  }
+}
+
+console.log(catMouse("C......m"));

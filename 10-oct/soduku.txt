@@ -1,0 +1,51 @@
+1. function solveSudoku(board):
+    make a deep copy of the board → newBoard
+    if solve(newBoard) succeeds:
+        return newBoard
+    else:
+        return null  # means no valid solution
+2. function solve(board):
+    find the first empty cell in board (value == 0)
+    if no empty cell found:
+        return true  # puzzle solved
+
+    for num from 1 to 9:
+        if placing num in that cell is valid:
+            temporarily place num in the cell
+            if solve(board) returns true:
+                return true  # success
+            remove num (reset cell to 0)  # backtrack
+
+    return false  # no valid number found, trigger backtrack
+
+3. function isValid(board, row, col, num):
+    # check row
+    if num already in board[row]:
+        return false
+
+    # check column
+    if num already in column 'col':
+        return false
+
+    # check 3x3 box
+    find the starting row and col of the 3x3 box
+    for r from boxRowStart to boxRowStart+2:
+        for c from boxColStart to boxColStart+2:
+            if board[r][c] == num:
+                return false
+
+    return true
+
+Step 5: Flow of execution
+
+Here’s how everything ties together logically:
+
+- solveSudoku(board) copies the input board.
+- It calls solve() on that copy.
+- solve() repeatedly:
+- Finds the next empty cell.
+- Tests all digits 1–9.
+- Checks validity using isValid().
+- If a placement works, it recursively continues.
+- If a placement fails later, it undoes (backtracks).
+- Once all cells are filled, recursion unwinds and the solved board is returned.

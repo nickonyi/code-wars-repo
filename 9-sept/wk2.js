@@ -29,3 +29,6 @@ function catMouse(x) {
 }
 
 console.log(catMouse("C......m"));
+function uefaEuro2016(teams, scores) {
+  // your code...
+}

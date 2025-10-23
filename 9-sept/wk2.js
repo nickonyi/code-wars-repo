@@ -13,27 +13,19 @@ function divCon(x) {
 
 //console.log(divCon([9, 3, "7", "3"]));
 
+//we want to see if the cat cathces the mouse
 function catMouse(x) {
-  return x;
-}
-
-function arrayLeaders(numbers){
-  //define a leader array
-  let leaders = [];
-  //loop through the array
-  for (let i = 0; i < numbers.length; i++) {
-    //obtain the item and the rest of the array
-   let num = numbers[i];
-     //add the items to its right
-   let sumNumbersRight = numbers.slice(i+1).reduce((a,b)=> a+b,0)
-     //compare if it is greater than the sum to its right add to the result array
-   if (num > sumNumbersRight) {
-     leaders.push(num)
-   }
-    
+  //remove the first and last item
+  const steps = x.split("").slice(1, -1);
+  //check the length of the item
+  const stepsLength = steps.length;
+  //check if its below or equal to three return caught
+  //otherwise return escaped
+  if (stepsLength <= 3) {
+    return "Caught!";
+  } else {
+    return "Escaped!";
   }
-  
-  return leaders;
 }
 
-console.log(arrayLeaders([1,2,3,4,0]));
+console.log(catMouse("C......m"));

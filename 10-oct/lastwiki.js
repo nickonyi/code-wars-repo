@@ -9,3 +9,18 @@ function derive(coefficient, exponent) {
   //return the required expression
   return `${multiplied}x^${newExp}`;
 }
+
+//givem an array of intergers find the product of K maximal numbers
+function maxProduct(numbers, size) {
+  //your code here
+  //sort the array in decending order
+  const decNumbers = numbers.sort((a, b) => b - a);
+  //extract an array of the specified size
+  const maxmalNumbers = decNumbers.slice(0, size);
+  //multiply the numbers
+  const product = maxmalNumbers.reduce((a, b) => a * b, 1);
+  //return the product
+  return product;
+}
+
+console.log(maxProduct([4, 3, 5], 2));

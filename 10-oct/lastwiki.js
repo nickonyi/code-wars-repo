@@ -23,4 +23,40 @@ function maxProduct(numbers, size) {
   return product;
 }
 
-console.log(maxProduct([4, 3, 5], 2));
+//console.log(maxProduct([4, 3, 5], 2));
+const rotateLeftOnce = (str) => {
+  return str.slice(1) + str[0];
+};
+
+const progressiveRotations = (num, rotations) => {
+  //convert the number into the array of digits
+  let digits = num.toString().split("");
+  //create an array to store the rottations
+  for (let i = 0; i < digits.length - 1; i++) {
+    //split the fixed part and the part to rotate
+    let fixed = digits.slice(0, i);
+    let rotating = digits.slice(i);
+    rotating = rotateLeftOnce(rotating.join("")).split("");
+    digits = [...fixed, ...rotating];
+    rotations.push(parseInt(digits.join("")));
+  }
+  return rotations;
+};
+
+//given an interger return the maximum number you got from doing the rotation
+function maxRot(n) {
+  // your code
+  //define an array to do my rotation
+  let rotations = [n];
+  //rotate the interggers while adding to the array
+  rotations = progressiveRotations(n, rotations);
+  console.log(rotations);
+
+  //from the array find the maximum number
+  const maxNumber = Math.max(...rotations);
+  //return the number
+  return maxNumber;
+}
+
+console.log(maxRot(507992495));
+console.log(rotateLeftOnce("507992495"));

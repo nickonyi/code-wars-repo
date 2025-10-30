@@ -59,4 +59,4 @@ function maxRot(n) {
 }
 
 console.log(maxRot(507992495));
-console.log(rotateLeftOnce("507992495"));
+console.log(rotateLeftOnce("50799249g5"));

@@ -58,5 +58,22 @@ function maxRot(n) {
   return maxNumber;
 }
 
-console.log(maxRot(507992495));
-console.log(rotateLeftOnce("50799249g5"));
+//input two arrays
+//output is one array whereby all occurrence of the first list that are in the second list are removed
+function arrayDiff(a, b) {
+  //define my result array
+  let result = [];
+  //loop through the first array
+  a.forEach((item) => {
+    //check if the item exists in the second array
+    //if not add the item to our end array
+    if (!b.includes(item)) {
+      result.push(item);
+    }
+  });
+
+  //return the end array
+  return result;
+}
+
+console.log(arrayDiff([1, 2, 2], [2]));

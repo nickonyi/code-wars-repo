@@ -75,5 +75,24 @@ function arrayDiff(a, b) {
   //return the end array
   return result;
 }
+//it takes in a 2d array and returns an array of average values in the nested array and the correspomding index
+function avgArray(arr) {
+  //define my end result
+  let result = [];
+  //loop through the array and then I add values in simlar indexes and find they average
+  //add to the final array
+  result = arr[0].map((_, i) => {
+    const sum = arr.reduce((sum, row) => sum + row[i], 0);
+    return sum / arr.length;
+  });
 
-console.log(arrayDiff([1, 2, 2], [2]));
+  //return the array
+  return result;
+}
+
+console.log(
+  avgArray([
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+  ])
+);

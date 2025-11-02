@@ -18,4 +18,6 @@ function last(...args) {
   return null;
 }
 
-console.log(last(5, 5, 7));
+function itinerary(travel) {
+  // here your code
+}

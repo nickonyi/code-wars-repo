@@ -33,10 +33,4 @@ function itinerary(travel) {
   return destinations.join("-");
 }
 
-console.log(
-  itinerary([
-    { in: "TRN", out: "FCO" },
-    { in: "FCO", out: "JFK" },
-    { in: "JFK", out: "FCO" },
-  ])
-);
+const palindromeChainLength = (n) => {};

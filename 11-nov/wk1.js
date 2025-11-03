@@ -33,4 +33,17 @@ function itinerary(travel) {
   return destinations.join("-");
 }
 
-const palindromeChainLength = (n) => {};
+//function that takes in a number and returns the number of steps required to return a palindrome
+const palindromeChainLength = (n) => {
+  //define the step variable
+
+  //increament the variable for every step
+  let reverse = parseInt(n.toString().split("").reverse().join(""));
+  if (n === reverse) {
+    return 0;
+  }
+
+  return 1 + palindromeChainLength(n + reverse);
+};
+
+console.log(palindromeChainLength(87));

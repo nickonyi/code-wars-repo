@@ -46,4 +46,24 @@ const palindromeChainLength = (n) => {
   return 1 + palindromeChainLength(n + reverse);
 };
 
-console.log(palindromeChainLength(87));
+//console.log(palindromeChainLength(87));
+//corrects the timestring
+function timeCorrect(timestring) {
+  if (timestring === null) return null;
+  if (!timestring) return "";
+  const parts = timestring.split(":");
+  if (parts.length !== 3) return null;
+  const [h, m, s] = parts.map(Number);
+  if ([h, m, s].some(isNaN)) return null;
+
+  const totalSecs = h * 3600 + m * 60 + s;
+
+  const hours = Math.floor(totalSecs / 3600) % 24;
+  const minutes = Math.floor((totalSecs % 3600) / 60);
+  const secs = totalSecs % 60;
+
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
+}
+
+console.log(timeCorrect("52:01:01"));

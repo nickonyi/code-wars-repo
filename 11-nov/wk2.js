@@ -7,7 +7,7 @@ function solution(digits) {
   let digitCounter = 0;
   //convert the input into a string
   const digitStr = String(digits);
-  //loop over my string array in groups of 5 digits
+  //loop over my string array in sliding window of 5 digits
   for (let i = 0; i <= digitStr.length - 5; i++) {
     let bigDigit = parseInt(digitStr.slice(i, i + 5));
     //if that number is greater than what I have in my digit counter that becomes my greatest digit

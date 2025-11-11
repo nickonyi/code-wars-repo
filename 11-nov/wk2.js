@@ -19,5 +19,34 @@ function solution(digits) {
   //return that digit
   return digitCounter;
 }
+//given the start and end numbers I should return the frequency of the numbers appearing
+//input is a 2 numbers
+//output an array of ten numbers representing the frequency of the numbers appearing
+const paintLetterboxes = (start, end) => {
+  // Your code here
+  //define my results array
+  let result = [];
+  //loop to get all the numbers from start to end
+  for (let i = start; i <= end; i++) {
+    result.push(i);
+  }
+  //break down the array of numbers to get the individual numbers
+  const allDigits = result
+    .map((num) => num.toString().split("").map(Number))
+    .flat();
 
-console.log(solution(1234567898765));
+  const intitial = {};
+  for (let i = 0; i <= 9; i++) {
+    intitial[i] = 0;
+  }
+  //create an object to represent frequency of the numbers
+  const freq = allDigits.reduce((acc, curr) => {
+    acc[curr] = (acc[curr] || 0) + 1;
+    return acc;
+  }, intitial);
+  //return the values into an array
+  const values = Object.values(freq);
+  return values;
+};
+
+console.log(paintLetterboxes(125, 132));

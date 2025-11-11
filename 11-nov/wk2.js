@@ -22,7 +22,7 @@ function solution(digits) {
 //given the start and end numbers I should return the frequency of the numbers appearing
 //input is a 2 numbers
 //output an array of ten numbers representing the frequency of the numbers appearing
-const paintLetterboxes = (start, end) => {
+const paintLetterboxesOld = (start, end) => {
   // Your code here
   //define my results array
   let result = [];
@@ -47,6 +47,18 @@ const paintLetterboxes = (start, end) => {
   //return the values into an array
   const values = Object.values(freq);
   return values;
+};
+
+//paint letter boxes refactored
+const paintLetterboxes = (start, end) => {
+  const frequencies = Array(10).fill(0);
+  for (let num = start; num <= end; num++) {
+    num
+      .toString()
+      .split("")
+      .forEach((x) => frequencies[x]++);
+  }
+  return frequencies;
 };
 
 console.log(paintLetterboxes(125, 132));

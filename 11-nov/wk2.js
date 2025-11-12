@@ -61,4 +61,8 @@ const paintLetterboxes = (start, end) => {
   return frequencies;
 };
 
-console.log(paintLetterboxes(125, 132));
+//console.log(paintLetterboxes(125, 132));
+
+function backToTheFuture(str) {
+  //Write your code here. Good luck McFly!
+}

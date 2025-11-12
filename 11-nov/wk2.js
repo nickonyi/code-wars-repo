@@ -63,6 +63,69 @@ const paintLetterboxes = (start, end) => {
 
 //console.log(paintLetterboxes(125, 132));
 
+//Input a string of the day he arrived in the past
+//output is a message indicating when he will be able to travel or if he is stuck
 function backToTheFuture(str) {
   //Write your code here. Good luck McFly!
+  //given my input extract the input day,date and month and store it in a variable
+  const [startDay, startDate, startMonth] = str.split(" ");
+  const date = parseInt(startDate);
+
+  //I will have an object of the months and the amount of days each month has
+  const months = {
+    January: 31,
+    February: 28,
+    March: 31,
+    April: 30,
+    May: 31,
+    June: 30,
+    July: 31,
+    August: 31,
+    September: 30,
+    October: 31,
+    November: 30,
+    December: 31,
+  };
+
+  //I will have an object of the matching months
+  const monthPairs = {
+    January: ["October"],
+    October: ["January"],
+    April: ["July"],
+    July: ["April"],
+    September: ["December"],
+    December: ["September"],
+    February: ["March", "November"],
+    March: ["February", "November"],
+    November: ["February", "March"],
+  };
+
+  //if the input month matches one of the matching months calculate how many days are between those months
+  if (monthPairs[startMonth]) {
+    const possibleMonths = monthPairs[startMonth];
+    const monthNames = Object.keys(months);
+    const startIndex = monthNames.indexOf(startMonth);
+
+    for (const match of possibleMonths) {
+      const endIndex = monthNames.indexOf(match);
+      //capacitor ended
+      if (endIndex <= startIndex) continue;
+      if (date > months[match]) continue;
+
+      //if the amount of days is divisible by 7 return the date he will be returning
+      let totalDays = 0;
+      for (let i = startIndex; i < endIndex; i++) {
+        totalDays += months[monthNames[i]];
+      }
+
+      if (totalDays % 7 == 0) {
+        return `I'm leaving here on ${startDay} ${startDate} ${match}!`;
+      }
+    }
+  }
+
+  //otherwise indicate he will not be able to come back
+  return "Doc, I can't get back to the future!";
 }
+
+console.log(backToTheFuture("Tuesday 31 March"));

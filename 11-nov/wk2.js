@@ -65,7 +65,7 @@ const paintLetterboxes = (start, end) => {
 
 //Input a string of the day he arrived in the past
 //output is a message indicating when he will be able to travel or if he is stuck
-function backToTheFuture(str) {
+function backToTheFutureOld(str) {
   //Write your code here. Good luck McFly!
   //given my input extract the input day,date and month and store it in a variable
   const [startDay, startDate, startMonth] = str.split(" ");
@@ -128,4 +128,21 @@ function backToTheFuture(str) {
   return "Doc, I can't get back to the future!";
 }
 
-console.log(backToTheFuture("Tuesday 31 March"));
+//back to the future refactored
+
+function backToTheFuture(str) {
+  const matching = {
+    January: ["October", 31],
+    April: ["July", 30],
+    September: ["December", 31],
+    February: ["March", 31],
+    March: ["November", 30],
+  };
+
+  const [startDay, startDate, startMonth] = str.split(" ");
+  return matching[startMonth] && matching[startMonth][1] >= startDate
+    ? `I'm leaving here on ${startDay} ${startDate} ${matching[startMonth][0]}!`
+    : `Doc, I can't get back to the future!`;
+}
+
+console.log(backToTheFuture("Tuesday 30 March"));

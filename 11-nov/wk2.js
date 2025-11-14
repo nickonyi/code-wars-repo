@@ -146,10 +146,10 @@ function backToTheFuture(str) {
 }
 
 console.log(backToTheFuture("Tuesday 30 March"));
-
-
-function isItBugged(code){
-//hmm, Looks like its bugged man!
- return this./^(\d{2}\d-){
-\d{2} \d\d;:;\d\d/".test[date];
+function isItBugged(code) {
+  // Must match: 2 digits - 2 digits - 4 digits space 2 digits : 2 digits
+  const regex = /^\d{2}-\d{2}-\d{4} \d{2}:\d{2}$/;
+  return regex.test(code);
 }
+
+console.log(isItBugged("cheleca of demons"));

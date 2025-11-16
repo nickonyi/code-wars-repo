@@ -165,3 +165,12 @@ function numberToPower(number, power) {
 }
 
 console.log(numberToPower(10, 3));
+
+//recursive version
+const numberToPowerRec = (number, power) => {
+  if (power === 0) return 1;
+
+  return number * numberToPower(number, power - 1);
+};
+
+console.log(numberToPowerRec(2, 3));

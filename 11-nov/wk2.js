@@ -153,3 +153,15 @@ function isItBugged(code) {
 }
 
 console.log(isItBugged("cheleca of demons"));
+
+function numberToPower(number, power) {
+  // Code here
+  let product = 1;
+
+  for (let i = 1; i <= power; i++) {
+    product *= number;
+  }
+  return product;
+}
+
+console.log(numberToPower(10, 3));

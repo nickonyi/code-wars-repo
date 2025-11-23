@@ -22,3 +22,7 @@ function parse(data) {
 }
 
 console.log(parse("iiisdosodddddiso"));
+
+function getMichaelLastName(inputText) {
+  // your awesome code here
+}

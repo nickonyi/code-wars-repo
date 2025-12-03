@@ -5,3 +5,7 @@ function problem(x) {
   }
   return x * 50 + 6;
 }
+
+function decArrowPinCode(arrowStr) {
+  return [];
+}

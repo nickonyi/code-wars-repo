@@ -30,7 +30,8 @@ function decArrowPinCode(arrowStr) {
 
   //start from the first number
   let current = Number(tokens[0]);
-  if (!current) return [];
+
+  if (current !== 0 && !current) return [];
   let [row, col] = findPosition(current);
   results.push(current);
 
@@ -48,7 +49,7 @@ function decArrowPinCode(arrowStr) {
       const newCol = col + dc;
 
       // return empty array immediately if out of bounds
-      if (!keypad[newRow] || keypad[newRow][newCol] === null) {
+      if (!keypad[newRow] || keypad[newRow][newCol] == null) {
         return [];
       }
 
@@ -57,8 +58,6 @@ function decArrowPinCode(arrowStr) {
       current = keypad[row][col];
       results.push(current);
     } else if (/^\*\d+$/.test(token)) {
-      console.log(token);
-
       //repeat prvious key
       const repeats = Number(token[1]);
       console.log("repeats:", repeats);
@@ -72,5 +71,6 @@ function decArrowPinCode(arrowStr) {
   return results;
 }
 
+console.log(typeof 0);
+
 console.log(decArrowPinCode("0←*2←"));
-console.log(/^\*\d+$/.test("*"));

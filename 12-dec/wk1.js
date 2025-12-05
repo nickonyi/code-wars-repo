@@ -71,6 +71,6 @@ function decArrowPinCode(arrowStr) {
   return results;
 }
 
-console.log(typeof 0);
-
-console.log(decArrowPinCode("0←*2←"));
+function solution(value) {
+  //...
+}

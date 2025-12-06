@@ -88,6 +88,4 @@ function solve(s) {
   return longest;
 }
 
-console.log(
-  solve("budngouryiijaotalkstkhwzeegxesafvliqvniouwxbupqmzaycdhrjmopefcz")
-);
+function validateRace(moves) {}

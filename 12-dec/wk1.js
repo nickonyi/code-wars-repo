@@ -76,4 +76,18 @@ function solution(value) {
   return `Value is ${String(value).padStart(5, "0")}`;
 }
 
-console.log(solution(5));
+function solve(s) {
+  //loop the string and derive the vowels and put them into their own array
+  let vowels = s.match(/[aeiou]+/g).map((item) => item.split(""));
+  //return the array with more items
+  const longest = vowels.reduce(
+    (max, curr) => (curr.length > max ? curr.length : max),
+    0
+  );
+
+  return longest;
+}
+
+console.log(
+  solve("budngouryiijaotalkstkhwzeegxesafvliqvniouwxbupqmzaycdhrjmopefcz")
+);

@@ -88,4 +88,25 @@ function solve(s) {
   return longest;
 }
 
-function validateRace(moves) {}
+function validateRace(moves) {
+  const sum = moves.reduce((a, b) => a + b, 0);
+  if (sum !== 0) return false;
+  const startingPosition = [];
+
+  for (let finalPos = 1; finalPos <= moves.length; finalPos++) {
+    const positionGained = moves[finalPos - 1];
+    const startPos = finalPos + positionGained;
+
+    if (startPos < 1 || startPos > moves.length) return false;
+    startingPosition.push(startPos);
+  }
+  console.log(startingPosition);
+
+  const unique = new Set(startingPosition);
+
+  if (unique.size !== moves.length) return false;
+
+  return true;
+}
+
+console.log(validateRace([2, -1, -1]));

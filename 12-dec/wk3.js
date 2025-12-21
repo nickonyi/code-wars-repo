@@ -22,3 +22,4 @@ class Block {
 let b = new Block([2, 4, 6]);
 console.log(b.getVolume());
 console.log(b.getHeight());
+console.log(b.getHeight());

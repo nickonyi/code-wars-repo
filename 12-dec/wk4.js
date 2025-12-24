@@ -20,3 +20,7 @@ function evil(n) {
 }
 
 console.log(evil(3));
+
+function pick(preferred, blacklisted, options) {
+  return "D"; // show me the money!
+}

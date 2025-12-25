@@ -26,19 +26,19 @@ function pick(preferred, blacklisted, options) {
 
   // 1. Remove blacklisted options
   const valid = options
-    .map(([skill, percentage], index) => ({ skill, percentage, index }))
+    .map(([skill, percentage], index) => ({
+      skill,
+      percentage,
+      index,
+    }))
     .filter((option) => !blacklisted.has(option.skill));
 
   // 2. If nothing remains, take the money
-  if (valid.length === 0) {
-    return "D";
-  }
-
+  if (valid.length === 0) return "D";
   // 3. Look for preferred options
   const preferredOptions = valid.filter((option) =>
     preferred.has(option.skill)
   );
-
   if (preferredOptions.length > 0) {
     let best = preferredOptions[0];
     for (const option of preferredOptions) {
@@ -56,7 +56,6 @@ function pick(preferred, blacklisted, options) {
       bestNeutral = option;
     }
   }
-
   return labels[bestNeutral.index];
 }
 

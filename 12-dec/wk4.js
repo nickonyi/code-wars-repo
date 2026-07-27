@@ -62,7 +62,7 @@ function pick(preferred, blacklisted, options) {
 console.log(
   pick(new Set(["attack", "defense"]), new Set(["luck"]), [
     ["luck", 25],
-    ["speed", 20],
+    ["speeed", 20],
     ["defense", 15],
   ])
 );
